@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
-import * as sortBy from 'lodash.sortBy';
+import * as sortBy from 'lodash.sortby';
 
 import { CharDataModalPage } from '../class-modal/class-modal.page';
 import { ClassParserService } from '../class-parser.service';
