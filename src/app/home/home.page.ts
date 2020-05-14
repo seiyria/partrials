@@ -12,7 +12,8 @@ TODO:
 popover w/ options (stored in url):
   - compressed view (no icons, smaller boxes)
   - show only shared chain abilities
-  - show only non-shared chain abilities
+  - show only personal chain abilities
+  - list duplicates button
 */
 
 @Component({
