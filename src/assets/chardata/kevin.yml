@@ -1,0 +1,147 @@
+
+classes:
+  Grappler:
+    tier: 1
+
+    abilities:
+      - name: Conflagration
+        shared: true
+        desc: Dealt damage increases by 15% when HP drops to 30% or below
+        statName: str
+        statReqValue: 4
+
+      - name: Ward Off
+        desc: Damage dealt by enemy targeting the player decreased by 5%
+        statName: sta
+        statReqValue: 2
+
+      - name: Defensive
+        desc: Defense and magic defense increased by 10% when using charge attack
+        statName: sta
+        statReqValue: 4
+
+      - name: Retain
+        desc: Effect length increased by 100% for status increase caused by move
+        statName: int
+        statReqValue: 4
+ 
+      - name: Payback
+        desc: Reduce total amount of CS gauge used by 10% when using class strike
+        statName: spr
+        statReqValue: 2
+
+      - name: Victory CS Boost
+        desc: Add 5% of CS gauge when enemy defeated
+        statName: spr
+        statReqValue: 4
+
+      - name: Lucky Break
+        desc: 50% chance of not getting knocked back
+        statName: luk
+        statReqValue: 2
+
+      - name: Forsake
+        desc: 5% chance of canceling out damage from opponent
+        statName: luk
+        statReqValue: 4
+
+    spells: []
+
+  Monk:
+    tier: 2
+    direction: Light
+    requires: Grappler
+
+    abilities:
+      - name: Attack Help
+        shared: true
+        desc: Attack increases by 20% when HP drops to 30% or below
+        statName: str
+        statReqValue: 12
+
+      - name: Defense Help
+        desc: Defense increases by 20% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 12
+
+      - name: Self-Heal
+        desc: Status effect and stat decrease effect time shortened by 30%
+        statName: int
+        statReqValue: 12
+
+      - name: Damage CS Boost II
+        desc: Add 3% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 12
+
+      - name: Damage Heal
+        shared: true
+        desc: 10% chance to recover 10% of HP when receiving damage
+        statName: luk
+        statReqValue: 9
+
+      - name: Broken Lines
+        desc: 30% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Pressure Point
+        desc: Boosts attack
+        statName: sta
+        statReqValue: 9
+
+      - name: Healing Light
+        desc: Recover ally's HP
+        statName: spr
+        statReqValue: 9
+
+  Brawler:
+    tier: 2
+    direction: Dark
+    requires: Grappler
+
+    abilities:
+      - name: Attack Recoil
+        desc: Easier to knock back enemy when power attack is successful
+        statName: str
+        statReqValue: 12
+
+      - name: Victory Heal
+        desc: Recover 10% of HP when enemy defeated
+        statName: sta
+        statReqValue: 9
+
+      - name: Defense Help
+        desc: Defense increases by 20% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 12
+
+      - name: Mute
+        shared: true
+        desc: 30% chance of causing silence when using power attack
+        statName: int
+        statReqValue: 12
+
+      - name: Payback II
+        desc: Reduce total amount of CS gauge used by 15% when using class strike
+        statName: spr
+        statReqValue: 9
+
+      - name: Victory CS Boost II
+        shared: yes
+        desc: Add 10% of CS gauge when enemy defeated
+        statName: spr
+        statReqValue: 12
+
+      - name: Ambush II
+        desc: Damage to enemy not targeting the player increased by 15%
+        statName: luk
+        statReqValue: 9
+
+      - name: Broken Lines
+        desc: 30% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 12
+
+    spells: []

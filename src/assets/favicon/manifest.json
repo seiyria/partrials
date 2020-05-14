@@ -1,0 +1,21 @@
+{
+    "name": "ParTrials: A Trials of Mana Party Creator",
+    "short_name": "ParTrials",
+    "theme_color": "#8827cd",
+    "background_color": "#8827cd",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

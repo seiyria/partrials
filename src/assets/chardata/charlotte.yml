@@ -1,0 +1,191 @@
+
+classes:
+  Cleric:
+    tier: 1
+
+    abilities:
+      - name: Mighty
+        shared: true
+        desc: Power attack damage increased by 5%
+        statName: str
+        statReqValue: 2
+
+      - name: Sturdy
+        desc: Attack increases by 5% when HP at 80% or above
+        statName: str
+        statReqValue: 4
+
+      - name: Defender
+        shared: true
+        desc: Base defense increased by 10, base attack decreased by 10
+        statName: sta
+        statReqValue: 4
+
+      - name: Close Call
+        desc: Recovers 20% more HP when healing an ally with 30% HP or below in battle
+        statName: int
+        statReqValue: 2
+
+      - name: Recovery
+        desc: Using a healing move on ally recovers 10% more HP in battle
+        statName: int
+        statReqValue: 4
+
+      - name: Heal CS Boost
+        desc: Add 5% of CS gauge when healing an ally's HP in battle
+        statName: spr
+        statReqValue: 4
+
+      - name: Ambush
+        desc: Damage to enemy not targeting the player increased by 10%
+        statName: luk
+        statReqValue: 2
+
+      - name: Persist
+        desc: 15% chance of training 1 HP instead of fainting
+        statName: luk
+        statReqValue: 4
+
+    spells:
+      - name: Healing Light
+        desc: Recover ally's HP
+        statName: spr
+        statReqValue: 2
+
+      - name: Twinkle Rain
+        desc: Heal ally's status effects
+        statName: spr
+        statReqValue: 6
+
+  Priestess:
+    tier: 2
+    direction: Light
+    requires: Cleric
+
+    abilities:
+      - name: Attack Recoil
+        desc: Easier to knock back enemy when power attack is successful
+        statName: str
+        statReqValue: 9
+
+      - name: Sturdy II
+        desc: Attack increases by 10% when HP at 80% or above
+        statName: str
+        statReqValue: 12
+
+      - name: Defender II
+        shared: true
+        desc: Base defense increased by 20, base attack decreased by 20
+        statName: sta
+        statReqValue: 9
+
+      - name: Close Call II
+        desc: Recovers 30% more HP when healing an ally with 30% HP or below in battle
+        statName: int
+        statReqValue: 9
+
+      - name: Auto-HP Heal
+        shared: true
+        desc: Recover 1% of HP for every 5 sec. in battle
+        statName: int
+        statReqValue: 12
+
+      - name: Safe Guard
+        desc: Cancel out stat decrease when using healing magic in battle
+        statName: luk
+        statReqValue: 9
+
+      - name: Bless
+        desc: 20% chance of changing MP needed for move to 0 in battle
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Healing Light +
+        desc: Recover all allies' HP
+        statName: spr
+        statReqValue: 9
+
+      - name: Holy Bolt
+        desc: Deals light magic damage
+        statName: spr
+        statReqValue: 9
+
+      - name: Stone Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 12
+
+      - name: Lightning Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 12
+
+      - name: Ice Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 15
+
+      - name: Flame Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 15
+
+  Enchantress:
+    tier: 2
+    direction: Dark
+    requires: Cleric
+
+    abilities:
+      - name: Attack Recoil
+        desc: Easier to knock back enemy when power attack is successful
+        statName: str
+        statReqValue: 9
+
+      - name: Quick Shot
+        shared: true
+        desc: Damage to enemy with 100% HP increased by 20%
+        statName: str
+        statReqValue: 12
+
+      - name: Defender II
+        shared: true
+        desc: Base defense increased by 20, base attack decreased by 20
+        statName: sta
+        statReqValue: 9
+
+      - name: Doze
+        desc: 30% chance of causing sleep when using power attack
+        statName: int
+        statReqValue: 9
+
+      - name: Super Summon
+        desc: Summoning magic damage increased by 30%
+        statName: int
+        statReqValue: 12
+
+      - name: Hard Ricochet
+        desc: 50% chance of relfecting stat decrease back
+        statName: luk
+        statReqValue: 9
+
+      - name: Random Debuff
+        desc: 10% chance of a random stat decreasing when using a power attack
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Healing Light +
+        desc: Recover all allies' HP
+        statName: spr
+        statReqValue: 9
+
+      - name: Chess Knight
+        desc: Summons Chess Knight, deals damage to enemy
+        statName: spr
+        statReqValue: 12
+
+      - name: Machine Golem
+        desc: Summons Machine Golem, deals damage to enemy
+        statName: spr
+        statReqValue: 12

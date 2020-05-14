@@ -24,3 +24,16 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: 'ManaSpace';
+  src: url('assets/fonts/manaspc.eot');
+  src: url('assets/fonts/manaspc.woff2') format('woff2'),
+       url('assets/fonts/manaspc.woff') format('woff'),
+       url('assets/fonts/manaspc.ttf')  format('truetype'),
+       url('assets/fonts/manaspc.svg#svgFontName') format('svg');
+}
+
+* {
+  font-family: ManaSpace, Roboto, "Helvetica Neue", sans-serif !important;
+}

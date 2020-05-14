@@ -1,0 +1,244 @@
+
+classes:
+  Magician:
+    tier: 1
+
+    abilities:
+      - name: Magic Recoil
+        desc: Easier to knock back enemy when magic is successful
+        statName: str
+        statReqValue: 2
+
+      - name: Reclaim
+        shared: true
+        desc: Recover 1 MP when power attack is successful
+        statName: str
+        statReqValue: 6
+
+      - name: Spell Guard
+        desc: Defense and magic defense increased by 15% while casting
+        statName: sta
+        statReqValue: 6
+
+      - name: Limit Break
+        shared: true
+        desc: Magic damage dealt increases by 5%
+        statName: int
+        statReqValue: 4
+
+      - name: Victory MP Boost
+        desc: Recover 2 MP when enemy is defeated
+        statName: spr
+        statReqValue: 4
+ 
+      - name: Magic Armor
+        desc: 15% chance that enemy magic will do 0 damage
+        statName: luk
+        statReqValue: 2
+
+      - name: Enigma
+        desc: Harder for enemies to target
+        statName: luk
+        statReqValue: 4
+
+    spells:
+      - name: Diamond Shards
+        desc: Deals earth magic damage
+        statName: sta
+        statReqValue: 4
+
+      - name: Holy Bolt
+        desc: Deals light magic damage
+        statName: spr
+        statReqValue: 2
+
+      - name: Cyclone
+        desc: Deals wind magic damage
+        statName: luk
+        statReqValue: 6
+
+  Sorceress:
+    tier: 2
+    direction: Light
+    requires: Magician
+
+    abilities:
+      - name: Reclaim II
+        desc: Recover 2 MP when power attack is successful
+        statName: str
+        statReqValue: 12
+
+      - name: Cast Resist
+        shared: true
+        desc: Opponents damage decreased by 20% when casting
+        statName: sta
+        statReqValue: 12
+
+      - name: Elemental Combo
+        desc: Damage increased by 5% when using magic of the same element in succession (up to 30%)
+        statName: int
+        statReqValue: 12
+
+      - name: Move MP Saver
+        desc: Decreases MP used for moves by 30% in battle
+        statName: spr
+        statReqValue: 12
+
+      - name: Bless
+        desc: 20% chance of changing MP needed for move to 0 in battle
+        statName: luk
+        statReqValue: 9
+
+    spells:
+      - name: Fireball
+        desc: Deals fire magic damage
+        statName: str
+        statReqValue: 9
+
+      - name: Fireball +
+        desc: Deals fire magic damage to area
+        statName: str
+        statReqValue: 15
+
+      - name: Explode
+        desc: Deals fire magic damage
+        statName: str
+        statReqValue: 15
+
+      - name: Diamond Shards +
+        desc: Deals earth magic damage to area
+        statName: sta
+        statReqValue: 9
+
+      - name: Earthquake
+        desc: Deals earth magic damage
+        statName: sta
+        statReqValue: 9
+
+      - name: Ice Smash
+        desc: Deals water magic damage
+        statName: int
+        statReqValue: 9
+
+      - name: Evil Gate
+        desc: Deals dark magic damage
+        statName: int
+        statReqValue: 9
+
+      - name: Ice Smash +
+        desc: Deals water magic damage to area
+        statName: int
+        statReqValue: 15
+
+      - name: Evil Gate +
+        desc: Deals dark magic damage to area
+        statName: int
+        statReqValue: 15
+
+      - name: Spike Freeze
+        desc: Deals water magic damage
+        statName: int
+        statReqValue: 15
+
+      - name: Holy Bolt +
+        desc: Deals light magic damage to area
+        statName: spr
+        statReqValue: 9
+
+      - name: Lucent Beam
+        desc: Deals light magic damage
+        statName: spr
+        statReqValue: 9
+
+      - name: Cyclone +
+        desc: Deals wind magic damage to area
+        statName: luk
+        statReqValue: 12
+
+      - name: Thunderstorm
+        desc: Deals wind magic damage
+        statName: luk
+        statReqValue: 12
+
+  Mystic:
+    tier: 2
+    direction: Dark
+    requires: Magician
+
+    abilities:
+      - name: Reclaim II
+        desc: Recover 2 MP when power attack is successful
+        statName: str
+        statReqValue: 12
+
+      - name: Victory Heal
+        desc: Recover 10% of HP when enemy defeated
+        statName: sta
+        statReqValue: 12
+
+      - name: Wound Magic
+        desc: Damage increased by 20% by sacrificing 5% of HP when using attack magic
+        statName: int
+        statReqValue: 12
+
+      - name: Dark Reduction
+        shared: true
+        desc: Opponent's dark elemental damage decreased by 10%
+        statName: spr
+        statReqValue: 12
+
+      - name: Random Debuff
+        desc: 10% chance of a random stat decreasing when using a power attack
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Fireball
+        desc: Deals fire magic damage
+        statName: str
+        statReqValue: 9
+
+      - name: Fireball +
+        desc: Deals fire magic damage to area
+        statName: str
+        statReqValue: 15
+
+      - name: Diamond Shards +
+        desc: Deals earth magic damage to area
+        statName: sta
+        statReqValue: 9
+
+      - name: Ice Smash
+        desc: Deals water magic damage
+        statName: int
+        statReqValue: 9
+
+      - name: Evil Gate
+        desc: Deals dark magic damage
+        statName: int
+        statReqValue: 9
+
+      - name: Ice Smash +
+        desc: Deals water magic damage to area
+        statName: int
+        statReqValue: 15
+
+      - name: Evil Gate +
+        desc: Deals dark magic damage to area
+        statName: int
+        statReqValue: 15
+
+      - name: Dark Force
+        desc: Deals dark magic damage
+        statName: int
+        statReqValue: 15
+
+      - name: Holy Bolt +
+        desc: Deals light magic damage to area
+        statName: spr
+        statReqValue: 9
+
+      - name: Cyclone +
+        desc: Deals wind magic damage to area
+        statName: luk
+        statReqValue: 12

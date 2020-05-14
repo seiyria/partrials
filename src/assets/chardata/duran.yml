@@ -1,0 +1,168 @@
+
+classes:
+  Fighter:
+    tier: 1
+
+    abilities:
+      - name: Counter
+        desc: Attack increases by 10% for 30 sec. when receiving damage (effect canot overlap)
+        statName: str
+        statReqValue: 2
+
+      - name: Break Armor
+        shared: true
+        desc: Normal attacks better at breaking armor by 50%
+        statName: str
+        statReqValue: 4
+
+      - name: Defensive
+        desc: Defense and magic defense increased by 10% while using charge attack
+        statName: sta
+        statReqValue: 4
+
+      - name: Quick Heal
+        desc: Status effect time shortened by 30%
+        statName: int
+        statReqValue: 2
+
+      - name: Retain
+        desc: Effect length increased by 100% for status increase caused by move
+        statName: int
+        statReqValue: 4
+
+      - name: Damage CS Boost
+        shared: yes
+        desc: Add 2% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 4
+
+      - name: Lucky Break
+        desc: 50% chance of not getting knocked back
+        statName: luk
+        statReqValue: 2
+
+      - name: Provoke
+        desc: Easier to be targeted by enemies
+        statName: luk
+        statReqValue: 4
+
+    spells: []
+
+  Knight:
+    tier: 2
+    direction: Light
+    requires: Fighter
+
+    abilities:
+      - name: Counter II
+        desc: Attack increases by 15% for 30 sec. when receiving damage (effect canot overlap)
+        statName: str
+        statReqValue: 9
+
+      - name: Charger
+        desc: Charge attack damage increased by 30%
+        statName: str
+        statReqValue: 12
+
+      - name: Defensive II
+        shared: yes
+        desc: Defense and magic defense increased by 15% while using charge attack
+        statName: sta
+        statReqValue: 12
+
+      - name: Recovery II
+        desc: Using a healing move on ally recovers 20% more HP in battle
+        statName: int
+        statReqValue: 9
+
+      - name: Fortitude II
+        desc: Attack increases by 20% when affected by status effect
+        statName: int
+        statReqValue: 12
+
+      - name: Healing MP Saver
+        shared: yes
+        desc: Decreases MP used for healing magic by 30% in battle
+        statName: spr
+        statReqValue: 12
+
+      - name: Critical Smash
+        desc: 30% chance of attack decrease with critical hit
+        statName: luk
+        statReqValue: 9
+
+      - name: Survive
+        shared: true
+        desc: 20% chance of retaining 1 HP instead of fainting
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Healing Light
+        desc: Recover ally's HP
+        statName: spr
+        statReqValue: 9
+
+  Gladiator:
+    tier: 2
+    direction: Dark
+    requires: Fighter
+
+    abilities:
+      - name: Attack Saber
+        desc: MP needed for saber magic increased by 4, increases damage dealt by 15%
+        statName: str
+        statReqValue: 9
+
+      - name: Charger
+        desc: Charge attack damage increased by 30%
+        statName: str
+        statReqValue: 12
+
+      - name: Victory Heal
+        desc: Recover 10% of HP when enemy defeated
+        statName: sta
+        statReqValue: 12
+
+      - name: Weak Point
+        desc: Damage to enemy's elemental weakness increased by 15%
+        statName: int
+        statReqValue: 9
+
+      - name: Guard Saber
+        shared: true
+        desc: Opponent's saber magic and corresponding elemental damage decreased by 15%
+        statName: int
+        statReqValue: 12
+
+      - name: Broken Lines
+        desc: 30% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 9
+
+      - name: Survive
+        shared: true
+        desc: 20% chance of retaining 1 HP instead of fainting
+        statName: luk
+        statReqValue: 12
+
+    spells: 
+      - name: Stone Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 9
+
+      - name: Lightning Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 9
+
+      - name: Ice Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 12
+
+      - name: Flame Saber
+        desc: Imbues ally's weapon with earth elemental damage
+        statName: spr
+        statReqValue: 12

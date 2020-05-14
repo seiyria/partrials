@@ -1,0 +1,173 @@
+
+classes:
+  Thief:
+    tier: 1
+
+    abilities:
+      - name: Sturdy
+        desc: Attack increases by 5% when HP at 80% or above
+        statName: str
+        statReqValue: 4
+
+      - name: Ward Off
+        desc: 10% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 2
+
+      - name: Interception
+        desc: Damage dealt by enemy targeting the player decreased by 5%
+        statName: sta
+        statReqValue: 4
+
+      - name: Retain
+        desc: Effect length increased by 100% for status increase caused by move
+        statName: int
+        statReqValue: 2
+
+      - name: Toxic
+        shared: true
+        desc: 30% chance of poisoning when using power attack
+        statName: int
+        statReqValue: 4
+
+      - name: Victory CS Boost
+        desc: Add 5% of CS gauge when enemy defeated
+        statName: spr
+        statReqValue: 4
+
+      - name: Enigma
+        desc: Harder for enemies to target
+        statName: luk
+        statReqValue: 2
+
+      - name: Lucky Find
+        desc: Item drop rate increased by 5%
+        statName: luk
+        statReqValue: 4
+
+    spells: []
+
+  Ranger:
+    tier: 2
+    direction: Light
+    requires: Thief
+
+    abilities:
+      - name: Sturdy II
+        desc: Attack increased by 10% when HP at 80% or above
+        statName: str
+        statReqValue: 12
+
+      - name: Stand Ground
+        shared: yes
+        desc: Cannot get knocked back while using charge attack
+        statName: sta
+        statReqValue: 9
+
+      - name: Interception II
+        shared: yes
+        desc: Damage dealt by enemy targeting the player decreased by 10%
+        statName: sta
+        statReqValue: 12
+
+      - name: Special Effect
+        desc: Damage to enemy with status effect increased by 30%
+        statName: int
+        statReqValue: 12
+
+      - name: Move MP Saver
+        shared: true
+        desc: Decreases MP used for moves by 30% in battle
+        statName: spr
+        statReqValue: 12
+
+      - name: Ambush II
+        desc: Damage to enemy not targeting the player increased by 15%
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Sleep Flower
+        desc: Chance of putting enemy to sleep
+        statName: int
+        statReqValue: 12
+
+      - name: Change Form
+        desc: Chance of changing enemies shape
+        statName: int
+        statReqValue: 12
+
+      - name: Arrow Rain
+        desc: Arrows rain down and deal non-elemental damage to enemy
+        statName: luk
+        statReqValue: 9
+
+      - name: Spikes
+        desc: Spikes come up from ground and deal non-elemental damage to enemy
+        statName: luk
+        statReqValue: 9
+
+  Ninja:
+    tier: 2
+    direction: Dark
+    requires: Thief
+
+    abilities:
+      - name: Sturdy II
+        desc: Attack increased by 10% when HP at 80% or above
+        statName: str
+        statReqValue: 12
+
+      - name: Stand Ground
+        shared: yes
+        desc: Cannot get knocked back while using charge attack
+        statName: sta
+        statReqValue: 9
+
+      - name: Interception II
+        shared: yes
+        desc: Damage dealt by enemy targeting the player decreased by 10%
+        statName: sta
+        statReqValue: 12
+
+      - name: Weak Point
+        desc: Damage to enemy's elemental weakness increased by 15%
+        statName: int
+        statReqValue: 9
+
+      - name: Chain Ninja
+        shared: true
+        desc: Damage increased by 5% when using ninja moves of same element in succession (up to 30%)
+        statName: int
+        statReqValue: 12
+
+      - name: Ninja SP Boost
+        desc: Add 5% of CS gauge when a ninja move is successful
+        statName: spr
+        statReqValue: 12
+
+    spells:
+      - name: Shuriken
+        desc: Projectile deals non-elemental damage to enemy
+        statName: luk
+        statReqValue: 9
+
+      - name: Water Diversion
+        desc: Deals water damage, decreases enemy's attack
+        statName: luk
+        statReqValue: 9
+
+      - name: Fire Diversion
+        desc: Dels fire damage, decreases enemy's magic attack and magic defense
+        statName: luk
+        statReqValue: 9
+
+      - name: Dirt Diversion
+        desc: Deals earth damage to enemy
+        statName: luk
+        statReqValue: 12
+
+      - name: Thunder Technique
+        desc: Deals wind damage, decreases enemy's defense
+        statName: luk
+        statReqValue: 9

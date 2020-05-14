@@ -1,0 +1,167 @@
+
+classes:
+  Amazon:
+    tier: 1
+
+    abilities:
+      - name: Counter
+        desc: Attack increases by 10% for 30 sec. when receiving damage (effect cannot overlap)
+        statName: str
+        statReqValue: 4
+
+      - name: Interception
+        desc: Damage dealt by enemy targeting the player decreased by 5%
+        statName: sta
+        statReqValue: 4
+
+      - name: Fortitude
+        shared: true
+        desc: Attack increases by 15% when affected by status effect
+        statName: int
+        statReqValue: 2
+
+      - name: Quick Heal
+        desc: Status effect time shortened by 30%
+        statName: int
+        statReqValue: 4
+
+      - name: Victory CS Boost
+        desc: Add 5% of CS gauge when enemy defeated
+        statName: spr
+        statReqValue: 2
+ 
+      - name: Payback
+        desc: Reduce total amount of CS gauge used by 10% when using class strike
+        statName: spr
+        statReqValue: 4
+
+      - name: Forsake
+        desc: 5% chance of canceling out damage from opponent
+        statName: luk
+        statReqValue: 2
+
+      - name: Pinpoint
+        shared: true
+        desc: Chance of critical hit increased by 10%
+        statName: luk
+        statReqValue: 4
+
+    spells: []
+
+  Valkyrie:
+    tier: 2
+    direction: Light
+    requires: Amazon
+
+    abilities:
+      - name: Attack Boost All
+        desc: All allies' attack increases by 3% in battle
+        statName: str
+        statReqValue: 12
+
+      - name: Winning Heal
+        desc: Recover 7% of HP for all allies after winning a battle
+        statName: sta
+        statReqValue: 12
+
+      - name: Stat Boost
+        desc: Stat increase from move increased by 8%
+        statName: int
+        statReqValue: 9
+
+      - name: Self-Heal
+        desc: Status effect and stat decrease effect time shortened by 30%
+        statName: int
+        statReqValue: 12
+
+      - name: Stat Boost MP Saver
+        desc: Decrease MP needed for move that increases stat by 30%
+        statName: spr
+        statReqValue: 12
+
+      - name: Magic Smash
+        shared: true
+        desc: 30% chance of magic attack and magic defense decrease with critical hit
+        statName: luk
+        statReqValue: 9
+
+      - name: Bountiful
+        shared: true
+        desc: Healing item's effectiveness increased by 20% in battle
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Protection
+        desc: Boosts ally's defense
+        statName: spr
+        statReqValue: 9
+
+      - name: Mental Boost
+        desc: Boosts ally's magic attack and magic defense
+        statName: spr
+        statReqValue: 9
+
+      - name: Strengthen
+        desc: Boosts ally's attack
+        statName: spr
+        statReqValue: 9
+
+  Rune Maiden:
+    tier: 2
+    direction: Dark
+    requires: Amazon
+
+    abilities:
+      - name: Charger
+        desc: Charge attack damage increased by 30%
+        statName: str
+        statReqValue: 12
+
+      - name: Defense Help
+        desc: Defense increases by 20% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 12
+
+      - name: Super Stat Down
+        shared: yes
+        desc: Stat increase from move increased by 5%
+        statName: int
+        statReqValue: 9
+
+      - name: Down Time
+        desc: Stat decrease from move lengethened by 50%
+        statName: int
+        statReqValue: 12
+
+      - name: Stat Down MP Saver
+        desc: Decrease MP needed for move that decreases stat by 30%
+        statName: spr
+        statReqValue: 12
+
+      - name: Magic Smash
+        shared: true
+        desc: 30% chance of magic attack and magic defense decrease with critical hit
+        statName: luk
+        statReqValue: 9
+
+      - name: Critical Smash
+        desc: 30% chance of attack decrease with critical hit
+        statName: luk
+        statReqValue: 12
+
+    spells:
+      - name: Defenseless
+        desc: Decreases enemy's defense
+        statName: spr
+        statReqValue: 12
+
+      - name: Enfeeble
+        desc: Decreases enemy's magic attack and magic defense
+        statName: spr
+        statReqValue: 12
+
+      - name: Weaken
+        desc: Decreases enemy's attack
+        statName: spr
+        statReqValue: 12
