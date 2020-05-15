@@ -55,7 +55,7 @@
 
               <ion-item *ngFor="let ability of sortAbilityLikes(charClass.abilities)" 
                         class="ability-row"
-                        [color]="isDupe(ability.name) ? 'warning' : ''"
+                        [color]="highlightDupes && isDupe(ability.name) ? 'warning' : ''"
                         [class.compressed]="compressedView">
 
                 <div slot="start" class="stat-explainer" *ngIf="!compressedView">
@@ -92,7 +92,7 @@
 
               <ion-item *ngFor="let ability of sortAbilityLikes(charClass.spells, false)" 
                         class="ability-row" 
-                        [color]="isDupe(ability.name) ? 'warning' : ''"
+                        [color]="highlightDupes && isDupe(ability.name) ? 'warning' : ''"
                         [class.ion-hide]="compressedRedundantSkills && unplussedSkillNames[charClass.className][ability.name]"
                         [class.compressed]="compressedView">
 
