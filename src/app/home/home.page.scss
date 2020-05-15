@@ -60,7 +60,7 @@
   }
 }
 
-.ability-row {
+.ability-row:not(.compressed) {
   max-height: 120px;
   min-height: 120px;
   --min-height: 120px;

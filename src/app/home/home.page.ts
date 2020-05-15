@@ -1,20 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ModalController, PopoverController } from '@ionic/angular';
 
+import { LocalStorage } from 'ngx-webstorage';
 import * as sortBy from 'lodash.sortby';
 
 import { CharDataModalPage } from '../class-modal/class-modal.page';
 import { ClassParserService } from '../class-parser.service';
-import { Router, ActivatedRoute } from '@angular/router';
-
-/*
-TODO:
-popover w/ options (stored in url):
-  - compressed view (no icons, smaller boxes)
-  - show only shared chain abilities
-  - show only personal chain abilities
-  - list duplicates button
-*/
+import { HomePopoverComponent } from './home.popover';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +16,14 @@ popover w/ options (stored in url):
 })
 export class HomePage implements OnInit {
 
+  @LocalStorage() public compressedView: boolean;
+  @LocalStorage() public sortAlpha: boolean;
+  @LocalStorage() public personalChains: boolean;
+  @LocalStorage() public sharedChains: boolean;
+  @LocalStorage() public highlightDupes: boolean;
+
   public chosenCharacters = [];
+  public abilitySpellCounts = {};
 
   public get isChoosingCharacters(): boolean {
     return this.chosenCharacters.length < 3;
@@ -32,6 +32,7 @@ export class HomePage implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    private popoverCtrl: PopoverController,
     private modalCtrl: ModalController,
     public classParser: ClassParserService
   ) {}
@@ -50,6 +51,8 @@ export class HomePage implements OnInit {
 
       return { name: charName, chosenClass: classes[i] };
     }).flat();
+
+    this.refreshDupes();
   }
 
   isChosen(char: string): boolean {
@@ -84,6 +87,7 @@ export class HomePage implements OnInit {
       // add the chosen one
       setTimeout(() => {
         this.chosenCharacters.push({ name: char, chosenClass: data });
+        this.refreshDupes();
         this.refreshUrl();
       });
     });
@@ -91,7 +95,19 @@ export class HomePage implements OnInit {
     await modal.present();
   }
 
-  sortAbilityLikes(abilityLikes: any[]): any[] {
+  sortAbilityLikes(abilityLikes: any[], canFilter = true): any[] {
+    if(canFilter && this.personalChains) {
+      abilityLikes = abilityLikes.filter(x => !x.shared);
+    }
+
+    if(canFilter && this.sharedChains) {
+      abilityLikes = abilityLikes.filter(x => x.shared);
+    }
+
+    if(this.sortAlpha) {
+      return sortBy(abilityLikes, like => like.name);
+    }
+
     return sortBy(
       abilityLikes,
       [
@@ -99,6 +115,41 @@ export class HomePage implements OnInit {
         like => like.statReqValue
       ]
     );
+  }
+
+  async openMenu($event) {
+    const popover = await this.popoverCtrl.create({
+      component: HomePopoverComponent,
+      event: $event,
+      translucent: true
+    });
+
+    await popover.present();
+  }
+
+  public isDupe(key: string): boolean {
+    return this.abilitySpellCounts[key] > 1;
+  }
+
+  private refreshDupes(): void {
+    this.abilitySpellCounts = {};
+
+    const allCharClasses = this.chosenCharacters.map(char => this.classParser.getFullCharacterClass(char.name, char.chosenClass));
+
+    allCharClasses.forEach(charClass => {
+
+      charClass.abilities.forEach(abi => {
+        if(!abi.shared) return;
+        this.abilitySpellCounts[abi.name] = this.abilitySpellCounts[abi.name] || 0;
+        this.abilitySpellCounts[abi.name]++;
+      });
+
+      charClass.spells.forEach(spl => {
+        this.abilitySpellCounts[spl.name] = this.abilitySpellCounts[spl.name] || 0;
+        this.abilitySpellCounts[spl.name]++;
+      });
+
+    });
   }
 
   private refreshUrl() {

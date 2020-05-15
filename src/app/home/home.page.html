@@ -3,6 +3,12 @@
     <ion-title>
       ParTrials
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openMenu($event)">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button> 
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -45,9 +51,14 @@
 
           <ion-card-content>
             <ion-list>
-              <ion-item *ngFor="let ability of sortAbilityLikes(charClass.abilities)" class="ability-row">
+              <ion-item *ngIf="charClass.abilities.length === 0">No abilities.</ion-item>
 
-                <div slot="start" class="stat-explainer">
+              <ion-item *ngFor="let ability of sortAbilityLikes(charClass.abilities)" 
+                        class="ability-row"
+                        [color]="isDupe(ability.name) ? 'warning' : ''"
+                        [class.compressed]="compressedView">
+
+                <div slot="start" class="stat-explainer" *ngIf="!compressedView">
                   <img class="stat-img" [src]="'assets/sprite/stat-' + ability.statName + '.png'" />
                   <span class="stat-value">{{ ability.statReqValue }} {{ ability.statName | uppercase }}</span>
                 </div>
@@ -79,9 +90,12 @@
             <ion-list>
               <ion-item *ngIf="charClass.spells.length === 0">No spells.</ion-item>
 
-              <ion-item *ngFor="let ability of sortAbilityLikes(charClass.spells)" class="ability-row">
+              <ion-item *ngFor="let ability of sortAbilityLikes(charClass.spells, false)" 
+                        class="ability-row" 
+                        [color]="isDupe(ability.name) ? 'warning' : ''"
+                        [class.compressed]="compressedView">
 
-                <div slot="start" class="stat-explainer">
+                <div slot="start" class="stat-explainer" *ngIf="!compressedView">
                   <img class="stat-img" [src]="'assets/sprite/stat-' + ability.statName + '.png'" />
                   <span class="stat-value">{{ ability.statReqValue }} {{ ability.statName | uppercase }}</span>
                 </div>

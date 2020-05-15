@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { CharDataModalPage } from '../class-modal/class-modal.page';
+import { HomePopoverComponent } from './home.popover';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { CharDataModalPage } from '../class-modal/class-modal.page';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, CharDataModalPage],
-  entryComponents: [CharDataModalPage]
+  declarations: [HomePage, CharDataModalPage, HomePopoverComponent],
+  entryComponents: [CharDataModalPage, HomePopoverComponent]
 })
 export class HomePageModule {}
