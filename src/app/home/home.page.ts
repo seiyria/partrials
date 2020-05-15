@@ -16,7 +16,10 @@ import { HomePopoverComponent } from './home.popover';
 })
 export class HomePage implements OnInit {
 
+  @LocalStorage() public class4Upgrade: boolean;
   @LocalStorage() public compressedView: boolean;
+  @LocalStorage() public compressedDescriptions: boolean;
+  @LocalStorage() public compressedRedundantSkills: boolean;
   @LocalStorage() public sortAlpha: boolean;
   @LocalStorage() public personalChains: boolean;
   @LocalStorage() public sharedChains: boolean;
@@ -24,6 +27,7 @@ export class HomePage implements OnInit {
 
   public chosenCharacters = [];
   public abilitySpellCounts = {};
+  public unplussedSkillNames = {};
 
   public get isChoosingCharacters(): boolean {
     return this.chosenCharacters.length < 3;
@@ -52,6 +56,7 @@ export class HomePage implements OnInit {
       return { name: charName, chosenClass: classes[i] };
     }).flat();
 
+    this.refreshUnplussed();
     this.refreshDupes();
   }
 
@@ -77,7 +82,8 @@ export class HomePage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: CharDataModalPage,
       componentProps: {
-        character: char
+        character: char,
+        upgradeToClass4: this.class4Upgrade
       }
     });
 
@@ -87,6 +93,7 @@ export class HomePage implements OnInit {
       // add the chosen one
       setTimeout(() => {
         this.chosenCharacters.push({ name: char, chosenClass: data });
+        this.refreshUnplussed();
         this.refreshDupes();
         this.refreshUrl();
       });
@@ -134,7 +141,8 @@ export class HomePage implements OnInit {
   private refreshDupes(): void {
     this.abilitySpellCounts = {};
 
-    const allCharClasses = this.chosenCharacters.map(char => this.classParser.getFullCharacterClass(char.name, char.chosenClass));
+    const allCharClasses = this.chosenCharacters
+      .map(char => this.classParser.getFullCharacterClass(char.name, char.chosenClass, this.class4Upgrade));
 
     allCharClasses.forEach(charClass => {
 
@@ -149,6 +157,24 @@ export class HomePage implements OnInit {
         this.abilitySpellCounts[spl.name]++;
       });
 
+    });
+  }
+
+  private refreshUnplussed(): void {
+    this.unplussedSkillNames = {};
+
+    const allCharClasses = this.chosenCharacters
+      .map(char => this.classParser.getFullCharacterClass(char.name, char.chosenClass, this.class4Upgrade));
+
+    allCharClasses.forEach(charClass => {
+      this.unplussedSkillNames[charClass.className] = {};
+
+      charClass.spells.forEach(spl => {
+        if(!spl.name.includes('+')) return;
+
+        const baseName = spl.name.split('+')[0].trim();
+        this.unplussedSkillNames[charClass.className][baseName] = true;
+      });
     });
   }
 

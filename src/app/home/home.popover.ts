@@ -8,8 +8,20 @@ import { LocalStorage } from 'ngx-webstorage';
   <ion-content>
     <ion-list>
       <ion-item>
+        <ion-checkbox slot="start" [(ngModel)]="class4Upgrade"></ion-checkbox>
+        <ion-label>Upgrade To Class 4</ion-label>
+      </ion-item>
+      <ion-item>
         <ion-checkbox slot="start" [(ngModel)]="compressedView"></ion-checkbox>
-        <ion-label>Compressed View</ion-label>
+        <ion-label>Hide Icons</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start" [(ngModel)]="compressedDescriptions"></ion-checkbox>
+        <ion-label>Hide Descriptions</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start" [(ngModel)]="compressedRedundantSkills"></ion-checkbox>
+        <ion-label>Hide Old Spells</ion-label>
       </ion-item>
       <ion-item>
         <ion-checkbox slot="start" [(ngModel)]="sortAlpha"></ion-checkbox>
@@ -34,7 +46,10 @@ import { LocalStorage } from 'ngx-webstorage';
 })
 export class HomePopoverComponent {
 
+  @LocalStorage() public class4Upgrade: boolean;
   @LocalStorage() public compressedView: boolean;
+  @LocalStorage() public compressedDescriptions: boolean;
+  @LocalStorage() public compressedRedundantSkills: boolean;
   @LocalStorage() public sortAlpha: boolean;
   @LocalStorage() public personalChains: boolean;
   @LocalStorage() public sharedChains: boolean;

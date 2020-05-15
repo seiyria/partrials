@@ -107,6 +107,113 @@ classes:
         statName: spr
         statReqValue: 9
 
+  Vanadis:
+    tier: 3
+    direction: Light
+    requires: Valkyrie
+
+    abilities:
+      - name: Light of Guidance
+        desc: All allies' attack increases by 7% when HP at 50% or above
+        statName: str
+        statReqValue: 27
+
+      - name: Light of Refuge
+        desc: All allies' defense increases by 7% when HP at 50% or below
+        statName: sta
+        statReqValue: 27
+
+      - name: Auto-HP Heal All
+        desc: Recover 1% of HP for all allies every 10 sec. in battle
+        statName: int
+        statReqValue: 27
+
+      - name: Damage CS Boost III
+        desc: Add 7% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 21
+
+      - name: Oracle
+        shared: true
+        desc: All stats increase when using class strike
+        statName: spr
+        statReqValue: 27
+
+      - name: Extra Potent
+        shared: true
+        desc: Also gain the status increase effect yourself
+        statName: luk
+        statReqValue: 21
+
+      - name: Random Buff
+        desc: Randomized status effect when stat is increased with move
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Freya
+        desc: Summons war goddess. Deals damage to enemies in the area, potentially changes their size
+        statName: int
+        statReqValue: 21
+
+  Starlancer:
+    tier: 3
+    direction: Dark
+    requires: Valkyrie
+
+    abilities:
+      - name: Attack Boost All II
+        desc: All allies' attack increases by 7% in battle
+        statName: str
+        statReqValue: 27
+
+      - name: Defense Boost All
+        desc: All allies' defense increases by 7% in battle
+        statName: sta
+        statReqValue: 27
+
+      - name: MGC Boost All
+        desc: All allies' magic attack increases by 5% in battle
+        statName: int
+        statReqValue: 27
+
+      - name: MGC Def Boost All
+        desc: All allies' magic defense increases by 5% in battle
+        statName: spr
+        statReqValue: 27
+
+      - name: Good Luck
+        shared: true
+        desc: 30% chance of stat increase from move increasing by 15%
+        statName: luk
+        statReqValue: 21
+
+      - name: Down Side
+        desc: 20% chance of reflecting ally's stat decrease back
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Seraph
+        desc: Summons winged god. Deals damage to enemies in the area, potentially causes silence
+        statName: int
+        statReqValue: 21
+
+      - name: Protection +
+        desc: Boosts all allies' defense
+        statName: spr
+        statReqValue: 21
+
+      - name: Mental Boost +
+        desc: Boosts all allies' magic attack and magic defense
+        statName: spr
+        statReqValue: 21
+
+      - name: Strengthen +
+        desc: Boosts all allies' attack
+        statName: spr
+        statReqValue: 21
+
   Rune Maiden:
     tier: 2
     direction: Dark
@@ -165,3 +272,209 @@ classes:
         desc: Decreases enemy's attack
         statName: spr
         statReqValue: 12
+        
+  Fenrir Knight:
+    tier: 3
+    direction: Dark
+    requires: Rune Maiden
+
+    abilities:
+      - name: Attacker
+        shared: true
+        desc: Base attack increased by 30, defense decreased by 30
+        statName: str
+        statReqValue: 27
+
+      - name: Interception
+        shared: true
+        desc: Damage dealt by enemy targeting the player decreased by 20%
+        statName: sta
+        statReqValue: 27
+
+      - name: Super Stat Down II
+        shared: true
+        desc: Stat decrease from move increased by 7%
+        statName: int
+        statReqValue: 27
+
+      - name: Stat Down CS Boost
+        desc: Add 15% of CS gauge when stat is decreased with move
+        statName: spr
+        statReqValue: 27
+
+      - name: Magic Smash II
+        desc: 60% chance of magic attack and magic defense decrease with critical hit
+        statName: luk
+        statReqValue: 21
+
+      - name: Bad Luck
+        desc: 30% chance of stat decrease from move increasing by 7%
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Hexas
+        desc: Summons monster, deals damage to enemies in the area
+        statName: int
+        statReqValue: 21
+
+      - name: Defenseless +
+        desc: Decreases all enemies' defense
+        statName: spr
+        statReqValue: 27
+
+      - name: Enfeeble +
+        desc: Decreases all enemies' magic attack and magic defense
+        statName: spr
+        statReqValue: 27
+
+      - name: Weaken +
+        desc: Decreases all enemies' attack
+        statName: spr
+        statReqValue: 27
+
+  Dragon Master:
+    tier: 3
+    direction: Light
+    requires: Rune Maiden
+
+    abilities:
+      - name: Charger II
+        desc: Charge atack damage increased by 75%
+        statName: str
+        statReqValue: 27
+
+      - name: Spell Resistance
+        shared: true
+        desc: 90% chance of not getting knocked back while casting
+        statName: sta
+        statReqValue: 27
+
+      - name: Super Stat Down II
+        shared: true
+        desc: Stat decrease from move increased by 7%
+        statName: int
+        statReqValue: 27
+
+      - name: Stat Down CS Boost
+        desc: Add 15% CS gauge when stat is decreased with move
+        statName: spr
+        statReqValue: 21
+
+      - name: Summon CS Boost
+        desc: Add 25% CS gauge when using summoning magic
+        statName: spr
+        statReqValue: 27
+
+      - name: Random Debuff II
+        shared: true
+        desc: 20% chance of a random stat decreasing when using a power attack
+        statName: luk
+        statReqValue: 21
+
+      - name: Opposite Effect
+        shared: true
+        desc: Triggers the opposite effect when stat is decreased with move
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Jormungandr
+        desc: Summons dragon. Deals damage to enemies in the area, porentially causes poison
+        statName: int
+        statReqValue: 21
+
+class4:
+  Light:
+    tier: 4
+    name: Meteorite
+
+    abilities:
+      - name: Attack Boost All III
+        desc: All allies' attack increases by 10% in battle
+        statName: str
+        statReqValue: 53
+
+      - name: Defense Boost All II
+        desc: All allies' defense increases by 10% in battle
+        statName: sta
+        statReqValue: 53
+
+      - name: Unlimited
+        desc: MP needed for summoning magic increased by 20, increases damage dealt by 35%
+        statName: int
+        statReqValue: 43
+
+      - name: MGC Boost All II
+        desc: All allies magic attack increases by 10% in battle
+        statName: int
+        statReqValue: 53
+
+      - name: Damage CS Boost IV
+        desc: Add 10% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 43
+
+      - name: MGC Def Boost All II
+        desc: All allies' magic defense increased by 10% in battle
+        statName: spr
+        statReqValue: 53
+
+      - name: Good Luck II
+        shared: true
+        desc: 30% chance of stat increase from move increasing by 20%
+        statName: luk
+        statReqValue: 43
+
+      - name: Stat Down Converter II
+        desc: 25% chance of reflecting ally's stat decrease back
+        statName: luk
+        statReqValue: 53
+
+  Dark:
+    tier: 4
+    name: Brynhildr
+
+    abilities:
+      - name: Attacker II
+        shared: true
+        desc: Base attack increased by 40, defense decreased by 40
+        statName: str
+        statReqValue: 53
+
+      - name: Defense Help III
+        desc: Defense increased by 40% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 53
+
+      - name: Summon MP Saver
+        desc: Decreases MP used for summoning by 50%
+        statName: int
+        statReqValue: 43
+
+      - name: Unlimited
+        desc: MP needed for summoning magic increased by 20, increases damage dealt by 35%
+        statName: int
+        statReqValue: 53
+
+      - name: Stat Down MP Saver II
+        desc: Decrease MP needed for move that decreases stat by 50%
+        statName: spr
+        statReqValue: 43
+
+      - name: Summon CS Boost II
+        desc: Add 35% of CS gauge when using summoning magic
+        statName: spr
+        statReqValue: 53
+
+      - name: Magic Smash III
+        shared: true
+        desc: 90% chance of magic attack and magic defense decrease with critical hit
+        statName: luk
+        statReqValue: 43
+
+      - name: Bad Luck II
+        shared: true
+        desc: 30% chance of stat decrease from move increasing by 10%
+        statName: luk
+        statReqValue: 53

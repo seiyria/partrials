@@ -160,6 +160,134 @@ classes:
         statName: luk
         statReqValue: 12
 
+  Grand Diviner:
+    tier: 3
+    direction: Light
+    requires: Sorceress
+
+    abilities:
+      - name: Tough
+        shared: true
+        desc: Damage to non-boss monsters increased by 20%
+        statName: str
+        statReqValue: 27
+
+      - name: Cast Resist II
+        desc: Opponent's damage decreased by 30% when casting
+        statName: sta
+        statReqValue: 27
+
+      - name: Limit Break II
+        shared: true
+        desc: Magic damage dealt increases by 25%
+        statName: int
+        statReqValue: 27
+
+      - name: Elemental Reduction
+        desc: Opponent's elemental damage decreased by 20%
+        statName: spr
+        statReqValue: 27
+
+      - name: Pinpoint II
+        desc: Chance of critical hit increased by 25%
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Explode +
+        desc: Deals fire magic damage to an area
+        statName: str
+        statReqValue: 21
+
+      - name: Earthquake +
+        desc: Deals earth magic damage to an area
+        statName: sta
+        statReqValue: 21
+
+      - name: Spike Freeze +
+        desc: Deals water magic damage to an area
+        statName: int
+        statReqValue: 21
+
+      - name: Doppelganger
+        desc: Magic deals lots of non-elemental damage to enemies in the area
+        statName: int
+        statReqValue: 33
+
+      - name: Lucent Beam +
+        desc: Deals light magic damage to an area
+        statName: spr
+        statReqValue: 21
+
+      - name: Thunderstorm +
+        desc: Deals wind magic damage to an area
+        statName: luk
+        statReqValue: 21
+
+  Archmage:
+    tier: 3
+    direction: Dark
+    requires: Sorceress
+
+    abilities:
+      - name: Judge
+        shared: true
+        desc: Damage to boss monsters increased by 20%
+        statName: str
+        statReqValue: 27
+
+      - name: Cast Resist II
+        desc: Opponent's damage decreased by 30% when casting
+        statName: sta
+        statReqValue: 27
+
+      - name: Elemental Combo II
+        desc: Damage increased by 10% when using magic of the same element in succession (up to 30%)
+        statName: int
+        statReqValue: 27
+
+      - name: Move MP Saver II
+        shared: yes
+        desc: Decreases MP used for moves by 40% during battle
+        statName: spr
+        statReqValue: 27
+
+      - name: Pinpoint II
+        desc: Chance of critical hit increased by 25%
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Explode +
+        desc: Deals fire magic damage to an area
+        statName: str
+        statReqValue: 21
+
+      - name: Earthquake +
+        desc: Deals earth magic damage to an area
+        statName: sta
+        statReqValue: 21
+
+      - name: Spike Freeze +
+        desc: Deals water magic damage to an area
+        statName: int
+        statReqValue: 21
+
+      - name: Glitter Dust
+        desc: Strong magic deals lots of non-elemental damage to enemies in the area
+        statName: int
+        statReqValue: 33
+
+      - name: Lucent Beam +
+        desc: Deals light magic damage to an area
+        statName: spr
+        statReqValue: 21
+
+      - name: Thunderstorm +
+        desc: Deals wind magic damage to an area
+        statName: luk
+        statReqValue: 21
+
   Mystic:
     tier: 2
     direction: Dark
@@ -242,3 +370,223 @@ classes:
         desc: Deals wind magic damage to area
         statName: luk
         statReqValue: 12
+
+  Magus:
+    tier: 3
+    direction: Dark
+    requires: Mystic
+
+    abilities:
+      - name: Wound
+        desc: Damage increased by 30% by sacrificing 5% of HP when using a power attack
+        statName: str
+        statReqValue: 27
+
+      - name: Spell Resistance
+        desc: 90% chance of not getting knocked back while casting
+        statName: sta
+        statReqValue: 27
+
+      - name: Wound Magic All
+        desc: Sacrifices 2% of allies' HP to increase magic damage 30% multiplied by the number of allies
+        statName: int
+        statReqValue: 27
+
+      - name: Damage MP Boost
+        shared: true
+        desc: Recover 2% of MP when receiving damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Magic Armor II
+        shared: true
+        desc: 30% chance that enemy magic will do zero damage
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Explode
+        desc: Deals fire magic damage
+        statName: str
+        statReqValue: 21
+
+      - name: Earthquake
+        desc: Deals earth magic damage
+        statName: sta
+        statReqValue: 21
+
+      - name: Spike Freeze
+        desc: Deals water magic damage
+        statName: int
+        statReqValue: 21
+
+      - name: Ancient Curse
+        desc: Ancient forbidden magic deals lots of non-elemental damage to enemies in the area
+        statName: int
+        statReqValue: 33
+
+      - name: Thunderstorm
+        desc: Deals wind magic damage
+        statName: luk
+        statReqValue: 21
+
+  Rune Seer:
+    tier: 3
+    direction: Light
+    requires: Mystic
+
+    abilities:
+      - name: Cheat
+        shared: true
+        desc: Damage to monster of lower level than the character's increased by 20%
+        statName: str
+        statReqValue: 27
+
+      - name: Total Resistance
+        shared: true
+        desc: All status effects canceled out
+        statName: sta
+        statReqValue: 27
+
+      - name: Special Effect II
+        desc: Damage to enemy with status effect increased by 40%
+        statName: int
+        statReqValue: 27
+
+      - name: Victory MP Boost II
+        shared: true
+        desc: Recover 3 MP when enemy defeated
+        statName: spr
+        statReqValue: 27
+
+      - name: Effect Boost All
+        shared: true
+        desc: Chance of status effect for all allies increased by 30%
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Blaze Wall
+        desc: Deals fire magic damage, chance of burning enemy
+        statName: str
+        statReqValue: 21
+
+      - name: Stone Cloud
+        desc: Deals earth magic damage, chance of petrifying enemy
+        statName: sta
+        statReqValue: 21
+
+      - name: Dark Force +
+        desc: Deals dark magic damage to an area
+        statName: int
+        statReqValue: 21
+
+      - name: Cold Blaze
+        desc: Deals water magic damage, chance of freezing enemy
+        statName: int
+        statReqValue: 21
+
+      - name: Annihilate
+        desc: Deals dark magic damage, chance of instantly destroying lower leveled enemies
+        statName: int
+        statReqValue: 33
+
+      - name: Stun Gust
+        desc: Deals wind magic damage, chance of silencing enemy
+        statName: luk
+        statReqValue: 21
+
+class4:
+  Light:
+    tier: 4
+    name: Mystic Queen
+
+    abilities:
+      - name: Tough II
+        shared: true
+        desc: Damage to non-boss monsters increased by 30%
+        statName: str
+        statReqValue: 43
+
+      - name: Judge II
+        desc: Damage to boss monsters increased by 30%
+        statName: str
+        statReqValue: 53
+
+      - name: Spell Guard III
+        shared: true
+        desc: Defense and magic defense increased by 40% when casting
+        statName: sta
+        statReqValue: 43
+
+      - name: Cast Resist III
+        desc: Opponent's damage decreased by 40% when casting
+        statName: sta
+        statReqValue: 53
+
+      - name: Limit Break III
+        desc: Magic damage dealt increases by 35%
+        statName: int
+        statReqValue: 53
+
+      - name: Elemental Reduction II
+        desc: Opponent's elemental damage decreased by 30%
+        statName: spr
+        statReqValue: 53
+
+      - name: Pinpoint III
+        desc: Chance of critical hit increased by 25%
+        statName: luk
+        statReqValue: 43
+
+      - name: Critical Damage II
+        desc: Damage increased by 40% when hit by critical hit
+        statName: luk
+        statReqValue: 53
+
+  Dark:
+    tier: 4
+    name: Spellbinder
+
+    abilities:
+      - name: Cheat II
+        desc: Damage to monster of level lower than the character's increased by 30%
+        statName: str
+        statReqValue: 43
+
+      - name: Wound II
+        desc: Damage increased by 40% by sacrificing 5% of HP when using a power attack
+        statName: str
+        statReqValue: 53
+
+      - name: Victory Heal III
+        desc: Recover 30% of HP when enemy defeated
+        statName: sta
+        statReqValue: 43
+
+      - name: Spell Resistance II
+        shared: true
+        desc: Cannot get knocked back while casting
+        statName: sta
+        statReqValue: 53
+
+      - name: Wound Magic All II
+        desc: Sacrifices 5% of allies' HP to increase magic damage 40% multiplied by the number of allies
+        statName: int
+        statReqValue: 53
+
+      - name: Damage MP Boost II
+        desc: Recover 5% of MP when receiving damage
+        statName: spr
+        statReqValue: 53
+
+      - name: Random Debuff III
+        desc: 30% chance of a random stat decrreasing when using a power attack
+        statName: luk
+        statReqValue: 43
+
+      - name: Magic Armor III
+        shared: true
+        desc: 40% chance that enemy magic will do zero damage
+        statName: luk
+        statReqValue: 53

@@ -107,6 +107,170 @@ classes:
         statName: luk
         statReqValue: 9
 
+  Nomad:
+    tier: 3
+    direction: Light
+    requires: Ranger
+
+    abilities:
+      - name: Attack Boost All II
+        desc: All allies' attack increases by 7% in battle
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Defense Boost All
+        desc: All allies' defense increased by 7% in battle
+        statName: sta
+        statReqValue: 27
+
+      - name: Critical Damage
+        desc: Damage increased by 30% when hit by critical hit
+        statName: luk
+        statReqValue: 21
+
+      - name: Pinpoint II
+        desc: Chance of critical hit increased by 25%
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Sleep Flower +
+        desc: Chance of putting enemies in the area to sleep
+        statName: int
+        statReqValue: 21
+
+      - name: Change Form +
+        desc: Chance of changing all enemies' sizes
+        statName: int
+        statReqValue: 21
+
+      - name: Poison Bubble
+        desc: Deals wood magic damage, chance of poisoning the enemy and absorbing MP
+        statName: int
+        statReqValue: 27
+
+      - name: Lunatique
+        desc: Decreases enemy's max HP
+        statName: int
+        statReqValue: 27
+
+      - name: Crystalline
+        desc: Cancels out damage from enemy for ally once
+        statName: spr
+        statReqValue: 27
+
+      - name: Lunar Radiance
+        desc: Raises ally's max HP temporarily
+        statName: spr
+        statReqValue: 27
+
+      - name: Nature Aura
+        desc: Helps increase ally's obtained CS in battle
+        statName: spr
+        statReqValue: 27
+
+      - name: Half Eclipse
+        desc: Halves enemy's HP
+        statName: spr
+        statReqValue: 33
+
+      - name: Wall
+        desc: Reflects magic damage away from ally once
+        statName: spr
+        statReqValue: 33
+
+      - name: Moon Energy
+        desc: Boosts ally's chance of critical hit
+        statName: spr
+        statReqValue: 33
+
+  Rogue:
+    tier: 3
+    direction: Dark
+    requires: Ranger
+
+    abilities:
+      - name: Super Trap
+        desc: Trap damage increased by 25%
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Defense Help II
+        desc: Defense increases by 30% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 27
+
+      - name: Toxic Trap
+        desc: 30% chance of poisoning the enemy and decreasing attack when a trap is successful
+        statName: int
+        statReqValue: 27
+
+      - name: Trap CS Boost
+        desc: Add 25% of CS gauge when a trap is successful
+        statName: spr
+        statReqValue: 27
+
+    spells:
+      - name: Sleep Flower +
+        desc: Chance of putting enemies in the area to sleep
+        statName: int
+        statReqValue: 21
+
+      - name: Change Form +
+        desc: Chance of changing all enemies' sizes
+        statName: int
+        statReqValue: 21
+
+      - name: Rockfall
+        desc: Rocks fall and deal non-elemental damage to enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Mines
+        desc: Explosions deal non-elemental damage to enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Hatchet Throw
+        desc: Projectile deals non-elemental damage to enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Axe Bomber
+        desc: Projectile deals non-elemental damage to enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Silver Dart
+        desc: Projectile deals light damage to enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Hurlbat
+        desc: Projectile deals dark damage to enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Rocket Launcher
+        desc: Projectile deals fire damage to enemy
+        statName: luk
+        statReqValue: 33
+
+      - name: Grumpkin
+        desc: Projectile deals wood damage to enemy and absorbs MP
+        statName: luk
+        statReqValue: 33
+
   Ninja:
     tier: 2
     direction: Dark
@@ -136,7 +300,6 @@ classes:
         statReqValue: 9
 
       - name: Chain Ninja
-        shared: true
         desc: Damage increased by 5% when using ninja moves of same element in succession (up to 30%)
         statName: int
         statReqValue: 12
@@ -158,7 +321,7 @@ classes:
         statReqValue: 9
 
       - name: Fire Diversion
-        desc: Dels fire damage, decreases enemy's magic attack and magic defense
+        desc: Deals fire damage, decreases enemy's magic attack and magic defense
         statName: luk
         statReqValue: 9
 
@@ -171,3 +334,227 @@ classes:
         desc: Deals wind damage, decreases enemy's defense
         statName: luk
         statReqValue: 9
+       
+  Nightblade:
+    tier: 3
+    direction: Dark
+    requires: Ninja
+
+    abilities:
+      - name: Reactionary
+        shared: true
+        desc: Magic attack and magic defense increases by 30% when HP drops to 30% or below
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Victory Heal II
+        desc: Recover 20% of CP when enemy defeated
+        statName: sta
+        statReqValue: 27
+
+      - name: Special Effect II
+        desc: Damage to enemy with status effect increased by 40%
+        statName: int
+        statReqValue: 21
+
+      - name: MGC DEF Down All
+        desc: Decreases all enemies' magic defense by 7%
+        statName: int
+        statReqValue: 27
+
+      - name: 1-Hit CS Boost
+        shared: true
+        desc: Add 30% of CS gauge when enemy defeated in one hit
+        statName: spr
+        statReqValue: 27
+
+    spells:
+      - name: Poison Cloud
+        desc: Deals non-elemental damage, chance of poisoning enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Fire Cloud
+        desc: Deals fire damage, chance of burning enemy
+        statName: luk
+        statReqValue: 21
+
+      - name: Needle Shower
+        desc: Deals non-elemental damage, chance of silencing enemy
+        statName: luk
+        statReqValue: 27
+
+      - name: Weapon Smack
+        desc: Projectile decreases enemy's max HP
+        statName: luk
+        statReqValue: 27
+
+      - name: Dark Rain
+        desc: Deals dark magic damage to area
+        statName: luk
+        statReqValue: 33
+        
+  Ninja Master:
+    tier: 3
+    direction: Light
+    requires: Ninja
+
+    abilities:
+      - name: Super Ninja Trick
+        desc: Ninja move damage increased by 25%
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Victory Heal II
+        desc: Recover 20% of CP when enemy defeated
+        statName: sta
+        statReqValue: 27
+
+      - name: Weak Point II
+        shared: true
+        desc: Damage to enemy's elemental weakness increased by 25%
+        statName: int
+        statReqValue: 21
+
+      - name: Chain Ninja II
+        desc: Damage increased by 10% when using ninja moves of same element in succession (up to 30%)
+        statName: int
+        statReqValue: 27
+
+      - name: Ninja SP Boost II
+        desc: Add 7% of CS gauge when a ninja move is successful
+        statName: spr
+        statReqValue: 27
+
+    spells:
+      - name: Shuriken +
+        desc: Projectile deals non-elemental damage to enemies in the area
+        statName: luk
+        statReqValue: 9
+
+      - name: Water Diversion +
+        desc: Deals water damage, decreases all enemies' attack
+        statName: luk
+        statReqValue: 9
+
+      - name: Fire Diversion +
+        desc: Deals fire damage, decreases all enemies' magic attack and magic defense
+        statName: luk
+        statReqValue: 9
+
+      - name: Dirt Diversion +
+        desc: Deals earth damage to all enemies
+        statName: luk
+        statReqValue: 12
+
+      - name: Thunder Technique +
+        desc: Deals wind damage, decreases all enemies' defense
+        statName: luk
+        statReqValue: 9
+ 
+class4:
+  Light:
+    tier: 4
+    name: Wardenkeep
+
+    abilities:
+      - name: Attack Boost All III
+        desc: All allies' attack increases by 10% in battle
+        statName: str
+        statReqValue: 53
+
+      - name: Defense Help III
+        shared: true
+        desc: Defense increases by 40% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 43
+
+      - name: Defense Boost All II
+        desc: All allies' defense increases by 10% in battle
+        statName: sta
+        statReqValue: 53
+
+      - name: Special Effect III
+        shared: true
+        desc: Damage to enemy with status effect increased by 60%
+        statName: int
+        statReqValue: 43
+
+      - name: Toxic II
+        shared: true
+        desc: 30% chance of poisining enemy and decreasing defense when using power attack
+        statName: int
+        statReqValue: 53
+
+      - name: Damage MP Boost II
+        desc: Recover 5% of MP when recieving damage
+        statName: spr
+        statReqValue: 53
+
+      - name: Critical Damage II
+        shared: true
+        desc: Damage increased by 40% when hit by critical hit
+        statName: luk
+        statReqValue: 43
+
+      - name: Enigma II
+        desc: Very hard for enemies to target
+        statName: luk
+        statReqValue: 53
+
+  Dark:
+    tier: 4
+    name: Vigilante
+
+    abilities:
+      - name: Reactionary II
+        desc: Magic attack and magic defense increases by 40% when HP drops to 30% or below
+        statName: str
+        statReqValue: 53
+
+      - name: Ward Off III
+        desc: Defense increases by 40% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 43
+
+      - name: Victory Heal III
+        desc: Recover 30% of HP when enemy defreated
+        statName: sta
+        statReqValue: 53
+
+      - name: Special Effect III
+        shared: true
+        desc: Damage to enemy with status effect increased by 60%
+        statName: int
+        statReqValue: 43
+
+      - name: Weak Point III
+        desc: Damage to enemy's elemental weakness increased by 35%
+        statName: int
+        statReqValue: 53
+
+      - name: Damage MP Boost II
+        desc: Recover 5% of MP when recieving damage
+        statName: spr
+        statReqValue: 53
+
+      - name: Retribution
+        shared: true
+        desc: 10% chance of destroying an enemy instantly when using power attack
+        statName: luk
+        statReqValue: 43
+
+      - name: Enigma II
+        desc: Very hard for enemies to target
+        statName: luk
+        statReqValue: 53

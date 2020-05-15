@@ -10,6 +10,7 @@ import { ClassParserService } from '../class-parser.service';
 })
 export class CharDataModalPage implements OnInit {
 
+  @Input() public upgradeToClass4: boolean;
   @Input() public character: string;
 
   public allClasses = [];
@@ -19,7 +20,7 @@ export class CharDataModalPage implements OnInit {
   ngOnInit() {
     const specificCharData = this.classParser.charData[this.character.toLowerCase()];
     Object.keys(specificCharData.classes).forEach(charClass => {
-      this.allClasses.push(this.classParser.getFullCharacterClass(this.character, charClass));
+      this.allClasses.push(this.classParser.getFullCharacterClass(this.character, charClass, false));
     });
   }
 

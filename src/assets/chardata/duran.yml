@@ -103,6 +103,118 @@ classes:
         statName: spr
         statReqValue: 9
 
+  Paladin:
+    tier: 3
+    direction: Light
+    requires: Knight
+
+    abilities:
+      - name: Attack Help II
+        desc: Attack increases by 30% when HP drops to 30% or below
+        statName: str
+        statReqValue: 21
+
+      - name: Charger II
+        desc: Charge attack damage increased by 75%
+        statName: str
+        statReqValue: 27
+
+      - name: Guard
+        desc: Take on 30% of ally's damage from opponent
+        statName: sta
+        statReqValue: 27
+
+      - name: Auto-HP Heal II
+        shared: true
+        desc: Recover 2% of HP for every 10 sec. in battle
+        statName: int
+        statReqValue: 21
+
+      - name: Heal
+        shared: true
+        desc: Recover 5% of HP when receiving 10% or more of player's HP damage in one hit
+        statName: int
+        statReqValue: 27
+
+      - name: Damage CS Boost III
+        desc: Add 7% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Cure
+        desc: 75% chance of canceling status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 21
+
+      - name: Miracle
+        desc: Retain 1 HP when hit with critical damage when HP at 50% or above
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Holy Saber
+        desc: Imbues ally's weapon with light elemental damage
+        statName: spr
+        statReqValue: 21
+
+  Liege:
+    tier: 3
+    direction: Dark
+    requires: Knight
+
+    abilities:
+      - name: Attack Boost All II
+        desc: All allies' attack increases by 7% in battle
+        statName: str
+        statReqValue: 21
+
+      - name: Charger II
+        desc: Charge attack damage increased by 75%
+        statName: str
+        statReqValue: 27
+
+      - name: Defense Boost All
+        desc: All allies' defense increases by 7% in battle
+        statName: sta
+        statReqValue: 27
+
+      - name: MGC Boost All
+        desc: All allies' magic attack increases by 5% in battle
+        statName: int
+        statReqValue: 21
+
+      - name: Heal Upgrade
+        desc: Recovers 35% more HP in battle when healed
+        statName: int
+        statReqValue: 27
+
+      - name: Heal CS Boost II
+        desc: Add 8% of CS gauge when healing an ally's HP in battle
+        statName: spr
+        statReqValue: 27
+
+      - name: Critical Smash II
+        shared: yes
+        desc: 60% chance of attack decrease with critical hit
+        statName: luk
+        statReqValue: 21
+
+      - name: Cure
+        desc: 75% chance of canceling status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Healing Light +
+        desc: Recover all allies' HP
+        statName: spr
+        statReqValue: 21
+
+      - name: Twinkle Rain
+        desc: Heals ally's status effects
+        statName: spr
+        statReqValue: 27
+
   Gladiator:
     tier: 2
     direction: Dark
@@ -166,3 +278,206 @@ classes:
         desc: Imbues ally's weapon with earth elemental damage
         statName: spr
         statReqValue: 12
+
+  Duelist:
+    tier: 3
+    direction: Dark
+    requires: Gladiator
+
+    abilities:
+      - name: Wound
+        desc: Damage increased by 30% by sacrificing 5% of HP when using a power attack
+        statName: str
+        statReqValue: 21
+
+      - name: Rage
+        desc: Each time 20% of HP in damage is accumulated, attack and defense increase by 10% (up to 30%)
+        statName: str
+        statReqValue: 27
+
+      - name: Victory Heal II
+        desc: Recover 20% of HP when enemy defeated
+        statName: sta
+        statReqValue: 27
+
+      - name: Fraction
+        shared: true
+        desc: Damage to enemy with moderate elemental resistance increased by 150%
+        statName: int
+        statReqValue: 21
+
+      - name: Guard Saber II
+        desc: Opponent's saber magic and corresponding elemental damage decreased by 25%
+        statName: int
+        statReqValue: 27
+
+      - name: Victory MP Boost II
+        desc: Recover 3 of MP when enemy defeated
+        statName: spr
+        statReqValue: 27
+
+      - name: Flourish
+        shared: true
+        desc: Damage increased by 30% when hit by critical strike
+        statName: luk
+        statReqValue: 21
+
+      - name: Forsake II
+        desc: 20% chance of canceling out damage from opponent
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Dark Saber
+        desc: Imbues ally's weapon with dark elemental damage
+        statName: spr
+        statReqValue: 21
+
+  Edelfrei:
+    tier: 3
+    direction: Light
+    requires: Gladiator
+
+    abilities:
+      - name: Attack Saber II
+        desc: MP needed for saber magic increased by 8, increases damage dealt by 25%
+        statName: str
+        statReqValue: 21
+
+      - name: Offensive Stance
+        desc: Attack increased by 40%, defense decreased by 40% during battle
+        statName: str
+        statReqValue: 27
+
+      - name: Defensive Stance
+        desc: Defense increased by 40%, attack decreased by 40% during battle
+        statName: sta
+        statReqValue: 27
+
+      - name: Fraction
+        shared: true
+        desc: Damage to enemy with moderate elemental resistance increased by 150%
+        statName: int
+        statReqValue: 21
+
+      - name: Weak Point All
+        desc: Damage to enemy's elemental weakness increased by 8% for all allies
+        statName: int
+        statReqValue: 27
+
+      - name: Victory MP Boost II
+        desc: Recover 3 of MP when enemy defeated
+        statName: spr
+        statReqValue: 27
+
+      - name: Concentrate
+        desc: Chance of critical hit increased by 25%
+        statName: luk
+        statReqValue: 21
+
+      - name: Flourish
+        shared: true
+        desc: Damage increased by 30% when hit by critical strike
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Dark Saber
+        desc: Imbues ally's weapon with dark elemental damage
+        statName: spr
+        statReqValue: 21
+        
+class4:
+  Light:
+    tier: 4
+    name: Divine Hero
+
+    abilities:
+      - name: Attack Boost All III
+        desc: All allies' attack increases by 10% in battle
+        statName: str
+        statReqValue: 43
+
+      - name: Attack Help III
+        shared: true
+        desc: Attack increases by 40% when HP drops to 30% or below
+        statName: str
+        statReqValue: 53
+
+      - name: Defense Boost All II
+        desc: All allies' defense increases by 10% in battle
+        statName: sta
+        statReqValue: 53
+
+      - name: Heal II
+        desc: Recover 10% of HP when receiving 20% or more of player's HP damage in one hit
+        statName: int
+        statReqValue: 43
+
+      - name: MGC Boost All II
+        desc: All allies' magic attack increases by 10% in battle
+        statName: int
+        statReqValue: 53
+
+      - name: Damage CS Boost IV
+        desc: Add 10% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 53
+
+      - name: Critical Smash III
+        shared: true
+        desc: 90% chance of attack decrease with critical hit
+        statName: luk
+        statReqValue: 43
+
+      - name: Cure II
+        desc: Cancel status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 53
+        
+  Dark:
+    tier: 4
+    name: Berserker
+
+    abilities:
+      - name: Wound II
+        desc: Damage increased by 40% by sacrificing 5% of HP when using a power attack
+        statName: str
+        statReqValue: 43
+
+      - name: Rage II
+        shared: true
+        desc: Each time 20% of HP in damage is accumulated, attack and defense increase by 10% (up to 30%)
+        statName: str
+        statReqValue: 53
+
+      - name: Victory Heal III
+        desc: Recover 30% of HP when enemy defeated
+        statName: sta
+        statReqValue: 53
+
+      - name: Weak Point III
+        desc: Damage to enemy's elemental weakness increased by 35%
+        statName: int
+        statReqValue: 43
+
+      - name: Weak Point All II
+        desc: Damage to enemy's elemental weakness increased by 12% for all allies
+        statName: int
+        statReqValue: 53
+
+      - name: Victory CS Boost III
+        shared: true
+        desc: Add 30% of CS gauge when enemy defeated
+        statName: spr
+        statReqValue: 53
+
+      - name: Flourish II
+        desc: Damage increased by 40% when hit by critical hit
+        statName: luk
+        statReqValue: 43
+
+      - name: Concentrate II
+        desc: Chance of critical hit increased by 40%
+        statName: luk
+        statReqValue: 53

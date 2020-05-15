@@ -20,8 +20,8 @@
         <ion-img class="character" 
                  [src]="'assets/sprite/char-' + char.name.toLowerCase() + '-s.png'" 
                  (click)="choose(char.name)"></ion-img>
-        <div class="character-class ion-margin-top">
-          {{ char.chosenClass }}
+        <div class="character-class ion-margin-top" *ngIf="classParser.getFullCharacterClass(char.name, char.chosenClass, class4Upgrade) as charClass">
+          {{ charClass.className }}
         </div>
       </ion-col>
     </ion-row>
@@ -43,10 +43,10 @@
 
     <ion-row class="skills" *ngIf="!isChoosingCharacters">
       <ion-col class="character-container" size-xs="12" size-md="4" *ngFor="let char of chosenCharacters">
-        <ion-card *ngIf="classParser.getFullCharacterClass(char.name, char.chosenClass) as charClass">
+        <ion-card *ngIf="classParser.getFullCharacterClass(char.name, char.chosenClass, class4Upgrade) as charClass">
           <ion-card-header>
             <ion-card-title>{{ char.name }} Chain Abilities</ion-card-title>
-            <ion-card-subtitle>{{ char.chosenClass }} - {{ charClass.abilities.length }} abilities</ion-card-subtitle>
+            <ion-card-subtitle>{{ charClass.className }} - {{ charClass.abilities.length }} abilities</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content>
@@ -68,7 +68,7 @@
                     {{ ability.name }} 
                     <ion-icon name="link-outline" *ngIf="ability.shared"></ion-icon>
                   </h2>
-                  <p><small>{{ ability.desc }}</small></p>
+                  <p *ngIf="!compressedDescriptions"><small>{{ ability.desc }}</small></p>
                 </ion-label>
 
               </ion-item>
@@ -80,10 +80,10 @@
 
     <ion-row class="spells" *ngIf="!isChoosingCharacters">
       <ion-col class="character-container" size-xs="12" size-sm="12" size-md="4" *ngFor="let char of chosenCharacters">
-        <ion-card *ngIf="classParser.getFullCharacterClass(char.name, char.chosenClass) as charClass">
+        <ion-card *ngIf="classParser.getFullCharacterClass(char.name, char.chosenClass, class4Upgrade) as charClass">
           <ion-card-header>
             <ion-card-title>{{ char.name }} Spells</ion-card-title>
-            <ion-card-subtitle>{{ char.chosenClass }} - {{ charClass.spells.length }} spells</ion-card-subtitle>
+            <ion-card-subtitle>{{ charClass.className }} - {{ charClass.spells.length }} spells</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content>
@@ -93,6 +93,7 @@
               <ion-item *ngFor="let ability of sortAbilityLikes(charClass.spells, false)" 
                         class="ability-row" 
                         [color]="isDupe(ability.name) ? 'warning' : ''"
+                        [class.ion-hide]="compressedRedundantSkills && unplussedSkillNames[charClass.className][ability.name]"
                         [class.compressed]="compressedView">
 
                 <div slot="start" class="stat-explainer" *ngIf="!compressedView">
@@ -104,7 +105,7 @@
                   <h2>
                     {{ ability.name }} 
                   </h2>
-                  <p><small>{{ ability.desc }}</small></p>
+                  <p *ngIf="!compressedDescriptions"><small>{{ ability.desc }}</small></p>
                 </ion-label>
 
               </ion-item>

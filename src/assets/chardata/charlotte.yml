@@ -1,4 +1,4 @@
-
+      
 classes:
   Cleric:
     tier: 1
@@ -131,6 +131,153 @@ classes:
         statName: spr
         statReqValue: 15
 
+  High Cleric:
+    tier: 3
+    direction: Light
+    requires: Priestess
+
+    abilities:
+      - name: Attack Help II
+        desc: Attack increases by 30% when HP drops to 30% or below
+        statName: str
+        statReqValue: 21
+
+      - name: Attack Saber II
+        desc: MP needed for saber magic increases by 8, increases damage dealt by 25%
+        statName: str
+        statReqValue: 27
+
+      - name: Spell Guard II
+        shared: true
+        desc: Defense and magic defense increased by 30% when casting
+        statName: sta
+        statReqValue: 27
+
+      - name: Recover Break
+        shared: true
+        desc: Heal 30% more than max HP when healing ally in battle
+        statName: int
+        statReqValue: 21
+
+      - name: Auto-HP Heal All
+        desc: Recover 1% of HP for all allies every 10 sec. in battle
+        statName: int
+        statReqValue: 27
+
+      - name: Heal CS Boost II
+        desc: Add 8% of CS gauge when healing an ally's HP in battle
+        statName: spr
+        statReqValue: 27
+
+      - name: Miracle
+        desc: Retain 1 HP when hit with critical damage when HP at 50% or above
+        statName: luk
+        statReqValue: 21
+
+      - name: Cure
+        desc: 75% chance of canceling status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Twinkle Rain +
+        desc: Heals all allies' status effects
+        statName: spr
+        statReqValue: 21
+
+      - name: Holy Saber
+        desc: Imbues ally's weapon with light elemental damage
+        statName: spr
+        statReqValue: 21
+
+      - name: Magic Shield
+        desc: Halves magic damage done to ally
+        statName: spr
+        statReqValue: 33
+
+      - name: Undead Away
+        desc: Deals non-elemental magic damage to undead, chance of instantly destroying lower leveled monsters
+        statName: spr
+        statReqValue: 33
+
+  Sage:
+    tier: 3
+    direction: Dark
+    requires: Priestess
+
+    abilities:
+      - name: Attack Boost All II
+        desc: All allies' attack increased by 7% in battle
+        statName: str
+        statReqValue: 21
+
+      - name: Attack Saber II
+        desc: MP needed for saber magic increases by 8, increases damage dealt by 25%
+        statName: str
+        statReqValue: 27
+
+      - name: Defense Boost All II
+        desc: All allies' defense increased by 7% in battle
+        statName: sta
+        statReqValue: 27
+
+      - name: Recover Break
+        shared: true
+        desc: Heal 30% more than max HP when healing ally in battle
+        statName: int
+        statReqValue: 21
+
+      - name: Heal Upgrade All
+        desc: Recovers 10% more of all allies' HP in battle
+        statName: int
+        statReqValue: 27
+
+      - name: Bless II
+        desc: 30% chance of changing MP needed for move to 0 in battle
+        statName: luk
+        statReqValue: 21
+
+      - name: Cure
+        desc: 75% chance of canceling status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Twinkle Rain +
+        desc: Heals all allies' status effects
+        statName: spr
+        statReqValue: 21
+
+      - name: Holy Bolt +
+        desc: Deals light magic damage to area
+        statName: spr
+        statReqValue: 21
+
+      - name: Stone Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Lightning Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Ice Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Flame Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Lucent Beam
+        desc: Deals light magic damage
+        statName: spr
+        statReqValue: 33
+
   Enchantress:
     tier: 2
     direction: Dark
@@ -189,3 +336,232 @@ classes:
         desc: Summons Machine Golem, deals damage to enemy
         statName: spr
         statReqValue: 12
+
+  Warlock:
+    tier: 3
+    direction: Dark
+    requires: Enchantress
+
+    abilities:
+      - name: Def Down All
+        desc: Decrease all enemies' defense by 7%
+        statName: str
+        statReqValue: 21
+
+      - name: Quick Shot II
+        shared: yes
+        desc: Damage to enemy with 100% HP increased by 30%
+        statName: str
+        statReqValue: 27
+
+      - name: ATK Down All
+        desc: Decrease all enemies' attack by 7%
+        statName: sta
+        statReqValue: 27
+
+      - name: Weak Point All
+        desc: Damage to enemy's elemental weakness increased by 8% for all allies
+        statName: int
+        statReqValue: 21
+
+      - name: MGC Def Down All
+        desc: Decrease all enemies' magic defense by 7%
+        statName: int
+        statReqValue: 27
+
+      - name: Hard Ricochet II
+        shared: true
+        desc: 65% chance of reflecting stat decrease back
+        statName: luk
+        statReqValue: 21
+
+      - name: Random Debuff II
+        desc: 20% chance of a random stat decreasing when using a power attack
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Dispel Magic
+        desc: Dispels all enemy magic effects
+        statName: spr
+        statReqValue: 21
+
+      - name: Gremlin
+        desc: Summons Gremlin, deals damage to enemy
+        statName: spr
+        statReqValue: 21
+
+      - name: Demon
+        desc: Summons Demon, deals damage to enemy
+        statName: spr
+        statReqValue: 27
+
+      - name: Fetid Breath
+        desc: Deals fire damage, decreases enemy's magic attack and magic defense
+        statName: spr
+        statReqValue: 27
+
+  Necromancer:
+    tier: 3
+    direction: Light
+    requires: Enchantress
+
+    abilities:
+      - name: Might II
+        desc: Power attack damage increased by 20%
+        statName: str
+        statReqValue: 21
+
+      - name: Quick Shot II
+        shared: yes
+        desc: Damage to enemy with 100% HP increased by 30%
+        statName: str
+        statReqValue: 27
+
+      - name: Victory Heal II
+        desc: Recover 20% of HP when enemy defeated
+        statName: sta
+        statReqValue: 27
+
+      - name: Charred
+        shared: yes
+        desc: 45% chance of causing burns when using power attack
+        statName: int
+        statReqValue: 21
+
+      - name: Stonework
+        desc: 10% chance of causing petrify when using power attack
+        statName: int
+        statReqValue: 27
+
+      - name: Climactic Hit
+        desc: Chance of critical hit increased by 70% when attack on status affected enemy is successful
+        statName: luk
+        statReqValue: 21
+
+      - name: Hard Ricochet II
+        shared: true
+        desc: 65% chance of reflecting stat decrease back
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Twinkle Rain +
+        desc: Heals all allies' status effects
+        statName: spr
+        statReqValue: 21
+
+      - name: Ghoul
+        desc: Summons Ghoul, deals damage to enemy
+        statName: spr
+        statReqValue: 21
+
+      - name: Ghost
+        desc: Summons Ghost, deals damage to enemy
+        statName: spr
+        statReqValue: 27
+
+      - name: Dark Curse
+        desc: Decreases all stats of enemy
+        statName: spr
+        statReqValue: 33
+
+      - name: Dark Saber
+        desc: Imbues ally's weapon with dark elemental damage
+        statName: spr
+        statReqValue: 33
+
+class4:
+  Light:
+    tier: 4
+    name: High Priestess
+
+    abilities:
+      - name: Sturdy III
+        shared: true
+        desc: Attack increases by 30% when HP at 80% or above
+        statName: str
+        statReqValue: 43
+
+      - name: Attack Boost All III
+        desc: All allies' attack increases by 10% in battle
+        statName: str
+        statReqValue: 53
+
+      - name: Cherish
+        desc: Opponent's damage decreased by 10% for all allies
+        statName: sta
+        statReqValue: 53
+
+      - name: Heal Upgrade All II
+        desc: Recovers 15% more of all allies' HP in battle
+        statName: int
+        statReqValue: 43
+
+      - name: Auto-HP Heal All II
+        desc: Recover 3% of HP for all allies every 20 sec. in battle
+        statName: int
+        statReqValue: 53
+
+      - name: Heal CS Boost III
+        desc: Add 10% of CS gauge when healing an ally's HP in battle
+        statName: spr
+        statReqValue: 53
+
+      - name: Miracle II
+        shared: true
+        desc: Retain 1 HP when hit with critical damage when HP at 30% or above
+        statName: luk
+        statReqValue: 43
+
+      - name: Cure II
+        desc: Cancel status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 53
+
+  Dark:
+    tier: 4
+    name: Chaosbringer
+    
+    abilities:
+      - name: Mighty III
+        shared: true
+        desc: Power attack damage increased by 30%
+        statName: str
+        statReqValue: 43
+
+      - name: Def Down All II
+        desc: Decrease all enemies' defense by 10%
+        statName: str
+        statReqValue: 53
+
+      - name: Atk Down All II
+        desc: Decrease all enemies' attack by 10%
+        statName: sta
+        statReqValue: 53
+
+      - name: Weak Point All II
+        desc: Damage to enemy's elemental weakness increased by 12% for all allies
+        statName: int
+        statReqValue: 43
+
+      - name: MGC Def Down All II
+        desc: Decrease all enemies' magic defense by 10%
+        statName: int
+        statReqValue: 53
+
+      - name: Summon CS Boost II
+        desc: Add 35% of CS gauge when using summoning magic
+        statName: spr
+        statReqValue: 53
+
+      - name: Hard Ricochet III
+        shared: true
+        desc: 80% chance of reflecting stat decrease back
+        statName: luk
+        statReqValue: 43
+
+      - name: Random Debuff III
+        desc: 30% chance of a random stat decreading when using a power attack
+        statName: luk
+        statReqValue: 53

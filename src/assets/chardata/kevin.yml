@@ -95,6 +95,101 @@ classes:
         desc: Recover ally's HP
         statName: spr
         statReqValue: 9
+        
+  Divine Fist:
+    tier: 3
+    direction: Light
+    requires: Monk
+
+    abilities:
+      - name: 1-Hit Class Strike
+        shared: true
+        desc: Class strike damage increased by 25% when HP at 100%
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Defense Help II
+        desc: Defense increases by 30% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 27
+
+      - name: Meditation
+        desc: Add 7% of CS gauge for every 5 sec. in battle
+        statName: int
+        statReqValue: 27
+
+      - name: Stat Boost CS Boost
+        desc: Add 25% of CS gauge when stat is increased with move
+        statName: spr
+        statReqValue: 27
+
+      - name: Revive
+        desc: 50% chance of reducing total amount of CS gauge used by 50% when using class strike
+        statName: luk
+        statReqValue: 21
+
+      - name: Broken Lines II
+        desc: 60% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Nature Aura
+        desc: Helps increase ally's obtained CS in battle
+        statName: spr
+        statReqValue: 21
+        
+  Warrior Monk:
+    tier: 3
+    direction: Dark
+    requires: Monk
+
+    abilities:
+      - name: Attack Saber II
+        desc: MP needed for saber magic inreased by 8, increases damage dealt by 25%
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Victory Heal II
+        desc: Recover 20% of HP when enemy defeated
+        statName: sta
+        statReqValue: 27
+
+      - name: Heal Upgrade
+        desc: Recovers 35% more HP in battle when healed
+        statName: int
+        statReqValue: 27
+
+      - name: Cure
+        desc: 75% chance of canceling status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 21
+
+      - name: Broken Lines II
+        desc: 60% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Healing Light +
+        desc: Recover all allies' HP
+        statName: spr
+        statReqValue: 21
+
+      - name: Leaf Saber
+        desc: Make ally's weapon absorb MP
+        statName: spr
+        statReqValue: 27
 
   Brawler:
     tier: 2
@@ -145,3 +240,194 @@ classes:
         statReqValue: 12
 
     spells: []
+        
+  Fatal Fist:
+    tier: 3
+    direction: Dark
+    requires: Brawler
+
+    abilities:
+      - name: Finishing Blow
+        shared: true
+        desc: Damage to the enemy with 30% HP or below increased by 30%
+        statName: str
+        statReqValue: 27
+
+      - name: Ward Off II
+        desc: 30% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 21
+
+      - name: Defense Help II
+        desc: Defense increases by 30% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 27
+
+      - name: Special Effect II
+        desc: Damage to enemy with status effect increased by 40%
+        statName: int
+        statReqValue: 27
+
+      - name: Damage CS Boost III
+        desc: Add 7% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Critical Damage
+        desc: Damage increased by 30% when hit by critical hit
+        statName: luk
+        statReqValue: 21
+
+      - name: Broken Lines II
+        desc: 60% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Moon Energy
+        desc: Boosts ally's chance of critical hit
+        statName: spr
+        statReqValue: 21
+        
+  Enlightened:
+    tier: 3
+    direction: Light
+    requires: Brawler
+
+    abilities:
+      - name: Adversity
+        desc: Attack, defense, and magic defense increased by 10% when HP drops to 30% or below
+        statName: str
+        statReqValue: 27
+
+      - name: Victory Heal II
+        desc: Recover 20% of HP when enemy defeated
+        statName: sta
+        statReqValue: 21
+
+      - name: Defense Help II
+        desc: Defense increases by 30% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 27
+
+      - name: Fortitude III
+        desc: Attack increases by 30% when affected by status effect
+        statName: int
+        statReqValue: 27
+
+      - name: Stat Down Resistance
+        shared: true
+        desc: All stat deceases canceled out
+        statName: spr
+        statReqValue: 27
+
+      - name: Critical Damage
+        desc: Damage increased by 30% when hit by critical hit
+        statName: luk
+        statReqValue: 21
+
+      - name: Broken Lines II
+        desc: 60% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 27
+
+    spells:
+      - name: Moon Saber
+        desc: Make ally's weapon absorb HP
+        statName: spr
+        statReqValue: 21
+
+class4:
+  Light:
+    tier: 4
+    name: Beast King
+
+    abilities:
+      - name: 1-Hit Class Strike II
+        desc: Class strike damage increased by 35% when HP at 100%
+        statName: str
+        statReqValue: 53
+
+      - name: Ward Off III
+        desc: 60% chance of decreasing damage from opponent by 50%
+        statName: sta
+        statReqValue: 43
+
+      - name: Victory Heal III
+        desc: Recover 30% of HP when enemy defeated
+        statName: sta
+        statReqValue: 53
+
+      - name: Heal Upgrade II
+        shared: true
+        desc: Recovers 50% more HP in battle when healed
+        statName: int
+        statReqValue: 53
+
+      - name: Heal CS Boost III
+        desc: Add 10% of CS gauge when healing an ally's HP in battle
+        statName: spr
+        statReqValue: 43
+
+      - name: Stat Boost CS Boost II
+        desc: Add 35% of CS gauge when stat is increased with move
+        statName: spr
+        statReqValue: 53
+
+      - name: Cure II
+        desc: Cancel status effect when using healing magic in battle
+        statName: luk
+        statReqValue: 43
+
+      - name: Broken Lines III
+        shared: true
+        desc: 90% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 53
+
+  Dark:
+    tier: 4
+    name: Annihilator
+
+    abilities:
+      - name: Finishing Blow II
+        shared: true
+        desc: Damage to enemy with 30% or below HP increased by 45%
+        statName: str
+        statReqValue: 53
+
+      - name: Victory Heal III
+        desc: Recover 30% of HP when enemy defeated
+        statName: sta
+        statReqValue: 43
+
+      - name: Defense Help III
+        desc: Defense increases by 40% when HP drops to 30% or below
+        statName: sta
+        statReqValue: 53
+
+      - name: Fortitude IV
+        desc: Attack increases by 40% when affected by status effect
+        statName: int
+        statReqValue: 53
+
+      - name: Payback III
+        desc: Reduce total amount of CS gauge used by 35% when using class strike
+        statName: spr
+        statReqValue: 43
+
+      - name: Damage CS Boost IV
+        desc: Add 10% of CS gauge when receiving damage
+        statName: spr
+        statReqValue: 53
+
+      - name: Critical Damage II
+        desc: Damage increased by 40% when hit by critical hit
+        statName: luk
+        statReqValue: 43
+
+      - name: Broken Lines III
+        shared: true
+        desc: 90% chance of defense decrease with critical hit
+        statName: luk
+        statReqValue: 53
