@@ -382,10 +382,35 @@ classes:
         statReqValue: 27
 
     spells:
-      - name: Dark Saber
-        desc: Imbues ally's weapon with dark elemental damage
+      - name: Stone Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
         statName: spr
         statReqValue: 21
+
+      - name: Lightning Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 21
+
+      - name: Ice Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 27
+
+      - name: Flame Saber +
+        desc: Imbues all allies' weapon with earth elemental damage
+        statName: spr
+        statReqValue: 27
+        
+      - name: Leaf Saber
+        desc: Make ally's weapon absorb MP
+        statName: spr
+        statReqValue: 33
+        
+      - name: Moon Saber
+        desc: Make ally's weapon absorb HP
+        statName: spr
+        statReqValue: 33
         
 class4:
   Light:
